@@ -1,0 +1,47 @@
+public class Name
+{
+    private String first, middle, last, other;
+    
+    public Name(String prominentName, String centerName, String finalName) {
+        first = prominentName;
+        middle = centerName;
+        last = finalName;
+    }
+    
+    public String getFirst() {
+        return first;
+    }
+    
+    public String getMiddle() {
+        return middle;
+    }
+    
+    public String getLast() {
+        return last;
+    }
+    
+    public String fML() {
+        return first + " " + middle + " " + last;
+    }
+    
+    public String lFM() {
+        return last + ", " + first + " " + middle;
+    }
+    
+    public boolean equals(String otherName) {
+        other = otherName;
+        if(first.equalsIgnoreCase(other)) {
+            return true;
+        }
+        else
+            return false;
+    }
+    
+    public String initials() {
+        return (first.substring(0,1) + middle.substring(0,1) + last.substring(0,1));
+    }
+    
+    public int length() {
+        return first.length() + middle.length() + last.length();
+    }
+}
