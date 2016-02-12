@@ -1,0 +1,43 @@
+import java.util.Scanner;
+public class TestNames
+{
+  public static void main(String[] args) {
+      Scanner scan = new Scanner(System.in);
+      
+      System.out.println("Please enter your first, middle, and last name. ");
+      System.out.println("First: ");
+      String first = scan.nextLine();
+      System.out.println("Middle: ");
+      String mid = scan.nextLine();
+      System.out.println("Last: ");
+      String last = scan.nextLine();
+      
+      System.out.println("Please enter another (not your own) first, middle, and last name. ");
+      System.out.println("First: ");
+      String first2 = scan.nextLine();
+      System.out.println("Middle: ");
+      String mid2 = scan.nextLine();
+      System.out.println("Last: ");
+      String last2 = scan.nextLine();
+      
+      Name name1 = new Name(first, mid, last);
+      Name name2 = new Name(first2, mid2, last2);
+      
+      System.out.println("Names in First-Middle-Last order: \nName 1: " + name1.fML() + " \nName 2: " + name2.fML());
+
+      System.out.println("Names in Last-First-Middle order: \nName 1: " + name1.lFM() + "\nName 2: " + name2.lFM());
+      
+      System.out.println("Name 1's initials: " + name1.initials());
+      System.out.println("Name 2's initials: " + name2.initials());
+      
+      System.out.println("Name 1 is " + name1.length() + " characters long.");
+      System.out.println("Name 2 is " + name2.length() + " characters long.");
+      
+    if(name1.length() == name2.length()) {
+      System.out.println("The two names are the same length.");
+    }
+    else{
+      System.out.println("The two names are different lengths.");
+    }
+  }
+}
